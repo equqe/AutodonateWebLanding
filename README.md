@@ -1,5 +1,7 @@
 # AutodonateLanding
 yookassa api integration + RCON, adaptive frontend, good design.
-Django, Python 3.12.2
+REG.RU hosting, running on Phusion Passenger. 
+
+Django + DRF, Python.
 
 (not finished until tomorrow)
