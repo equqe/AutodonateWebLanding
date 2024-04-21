@@ -109,13 +109,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
@@ -124,6 +120,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT='static/'
+
+# Yookassa
+YOOKASSA_SECRET_KEY = env('YOOKASSA_SECRET_KEY')
+YOOKASSA_SHOP_ID = env('YOOKASSA_SHOP_ID')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
