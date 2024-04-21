@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krasworld.ru - контакты</title>
+
+    <!-- css connecting -->
+    <link rel="stylesheet" href="{% static "main/css/style.css"%}" type="text/css">
+    <link rel="stylesheet" href="{% static "main/css/bootstrap.min.css"%}" type="text/css">
+    <link rel="stylesheet" href="{% static "main/css/font-awesome.min.css"%}" type="text/css">
+    
+    <style>
+    body {
+      background-image: url("/static/main/img/bg-price.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="../">
+                    <img src="{% static "main/img/logo-kw.png"%}" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="https://m.vk.com/club225293852?from=groups"><i class="fa fa-vk"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    
+    <!-- contacts -->
+    <section class="vault-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Контакты и реквизиты</h2>
+                        <div id="contacts">
+                            <p>ФИО: Кравченко Алексей Сергеевич</p>
+                            <p>Почта: kravtimoff2@gmail.com</p>
+                            <p>ИНН: 783900758265</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

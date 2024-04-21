@@ -1,0 +1,530 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krasworld.ru</title>
+
+    <!-- css connecting -->
+    <link rel="stylesheet" href="{% static "main/css/bootstrap.min.css"%}" type="text/css">
+    <link rel="stylesheet" href="{% static "main/css/font-awesome.min.css"%}" type="text/css">
+    <link rel="stylesheet" href="{% static "main/css/magnific-popup.css"%}" type="text/css">
+    <link rel="stylesheet" href="{% static "main/css/slicknav.min.css"%}" type="text/css">
+    <link rel="stylesheet" href="{% static "main/css/style.css"%}" type="text/css">
+    
+    <link rel="icon" href="{% static "main/img/icons/favicon.ico"%}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div id="notification">Текст скопирован в буфер обмена!</div>
+    
+    <!-- preloader -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- header -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="">
+                    <img src="{% static "main/img/logo-kw.png"%}" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="https://m.vk.com/club225293852?from=groups"><i class="fa fa-vk"></i></a>
+                <a href="https://youtube.com/@TomorYT?si=CZndvwOlwbTlm711"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- welcome section -->
+    <section class="welcome-section">
+        <div class="welcome-items">
+            <div class="single-welcome-item set-bg" data-setbg="{% static "main/img/welcome-section/welcome.png"%}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="welcome-text">
+                                <h2>Твой любимый</h2>
+                                <h1>ГРИФЕРСКИЙ СЕРВЕР</h1>
+                                <div class="divider"></div>
+                                <button class="copy-btn">IP: mc.krasworld.ru</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- welcome section end -->
+
+    <!-- rules -->
+    <section class="about-rules spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <h2>ПРАВИЛА</h2>
+                        <p class="short-details">Правила сервера обязательны для исполнения - незнание не освобождает от ответственности.</p>
+                        <p class="long-details">Отправляйте репорт, если видите злоупотребление правами(также если Вас шантажируют, угрожают Вам), баги, ошибки в переводе и другие проблемы.<br>
+                        <div id="rules-about">
+                            0.1. За намеренное скрытие багов и их эксплуатацию будут применена мера наказания вплоть до перманентного бана по IP.<br>
+                            0.2. Независимо от статуса игрока, будь он Игрок или Император - все равны и все понесут наказание за нарушение правил.<br>
+                            0.3. Никому не давайте свой пароль!<br>
+                            0.4. Вы соглашаетесь с тем, что деньги, переведенные на сервер, не возвращаются ни при каких условиях и обстоятельствах и считаются добровольным пожертвованием на развитие проекта.<br>
+                            Все перечисления на счет являются добровольными пожертвованиями для развития сервера.<br>
+                            0.5. Одному лицу допускается иметь несколько аккаунтов, только если они не используются для вреда игровому серверу, другим игрокам; не используются для нарушения правил и обхода блокировок.<br>
+                            0.6. Запрещена продажа и передача аккаунтов.<br>
+                            0.7. Администрация в праве снять у вас донат за многочисленные нарушения на сервере!<br>
+                        </div>
+                            <br>
+                            <p class="short-details">Правила чата:</p>
+                        <div id="rules-about">
+                            1.1. Запрещено писать одинаковые сообщения в чат (флудить). <br>
+                            1.2. Запрещено попрошайничать, выпрашивая какие-либо ресурсы, права, и подобное.<br>
+                            1.3. Запрещено рекламировать другие сервера, баги, программы для взлома.<br>
+                            1.4. Запрещено представляться администрацией сервера.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="{% static "main/img/about-rules.png"%}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- rules end -->
+
+    <!-- available servers -->
+    <section class="available-servers">
+        <div class="servers-title set-bg" data-setbg="{% static "main/img/servers-bg.jpg"%}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 m-auto text-center">
+                        <div class="section-title pl-lg-4 pr-lg-4 pl-0 pr-0">
+                            <h2>ДОСТУПНЫЕ СЕРВЕРА</h2>
+                            <p>IP: mc.krasworld.ru // ver1.16.5 <br>
+                            регистрируйся или логинься и играй!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="servers-item set-bg" data-setbg="{% static "main/img/servers/server-1.jpg"%}">
+                        <h4>ГРИФЕРСКИЙ #1</h4>
+                        <p>Гриферский сервер на 1.16.5. Исследуй обширный мир и РАЗРУШАЙ!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="servers-item set-bg" data-setbg="{% static "main/img/servers/server-2.jpg"%}">
+                        <h4>ГРИФЕРСКИЙ #2</h4>
+                        <p>Второй гриферский, 1.16.5. 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="servers-item set-bg" data-setbg="{% static "main/img/servers/server-3.png"%}">
+                        <h4>ЛОББИ</h4>
+                        <p>Красочное лобби с кейсами! Тут есть паркур и ты, возможно, сможешь даже встретить ютубера!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="servers-item set-bg" data-setbg="{% static "main/img/servers/server-4.jpg"%}">
+                        <h4>COMING SOON...</h4>
+                        <p>Этот сервер всё ещё развивается!:) В будущем у этого проекта будет еще больше режимов, серверов и плюшек!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- available servers end -->
+
+    <!-- vault -->
+    <section class="vault-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>КРИСТАЛЛИКИ</h2>
+                        <p>ВАЛЮТА СЕРВЕРА</p>
+                        <div class="star">
+                            <img class="vault-star anim-elem" src="{% static "main/img/star.png"%}" alt=""> <h2 class="star-h2"> 1 KR ➞ 1 ₽</h2> 
+                        </div>
+                        <div id="calc"> 
+                            <input type="range" value="10" min="10" max="5000" step="5" id="range" oninput="rangevalue.value=value"/>
+                            <br>
+                            <br>
+                            <br>
+                            <form>
+                                <div>
+                                    <input 
+                                      type="number" 
+                                      id="rangevalue" 
+                                      value="10" 
+                                      min="10" 
+                                      max="5000" 
+                                      step="5" 
+                                      oninput="range.value=value"
+                                      required /> <a id="rub"> <span class="validity"></span> KR </a> <input type="submit" id="crystal" class="copy-btn" value="КУПИТЬ" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- vault end -->
+
+    <!-- price plan -->
+    <section class="price-section spad set-bg" data-setbg="{% static "main/img/bg-price.jpg"%}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>ВЫБЕРИ ПРИВИЛЕГИЮ ПО ДУШЕ!</h2>
+                        <p>Множество способов оплаты! Максимально быстрая автоматическая выдача доната! Уникальные кит-наборы!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>ЗАЯЦ</h4>
+                        <div class="price-plan">
+                            <h2>55 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>УЗНАВАЙ КРАФТ</li>
+                            <li>ДОСТУП К ВИРТ. ВЕРСТАКУ</li>
+                            <li>УЗНАЙ СВОИ КООРДИНАТЫ</li>
+                            <li>5 СЛОТОВ НА АУКЦИОНЕ</li>
+                            <li>2 ПРИВАТА</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>СТРЕЛОК</h4>
+                        <div class="price-plan">
+                            <h2>95 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>ДОСТУП К ШЛЯПКАМ</li>
+                            <li>ВОСПОЛНЕНИЕ ГОЛОДА</li>
+                            <li>РТП НА БОЛЬШОЕ РАССТОЯНИЕ</li>
+                            <li>7 СЛОТОВ НА АУКЦИОНЕ</li>
+                            <li>4 ПРИВАТА</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>ВОИН</h4>
+                        <div class="price-plan">
+                            <h2>122 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>ТУШИ СЕБЯ ОТ ОГНЯ</li>
+                            <li>ВИРТ. ЭНДЕР-СУНДУК</li>
+                            <li>ИГНОРИРУЙ ИГРОКОВ</li>
+                            <li>9 СЛОТОВ НА АУКЦИОНЕ</li>
+                            <li>8 ПРИВАТОВ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>ДЕЛЬФИН</h4>
+                        <div class="price-plan">
+                            <h2>165 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>ЧИНИ ПРЕДМЕТЫ</li>
+                            <li>НАХОДИ ИГРОКОВ РЯДОМ</li>
+                            <li>УСТАНОВИ ЛИЧНОЕ ВРЕМЯ</li>
+                            <li>14 СЛОТОВ НА АУКЦИОНЕ</li>
+                            <li>16 ПРИВАТОВ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>МЕДВЕДЬ</h4>
+                        <div class="price-plan">
+                            <h2>232 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>МЕНЯЙ НИК</li>
+                            <li>СМОТРИ ЧУЖИЕ ИНВЕНТАРИ</li>
+                            <li>ПОПОЛНЯЙ ЗДОРОВЬЕ</li>
+                            <li>22 СЛОТА НА АУКЦИОНЕ</li>
+                            <li>48 ПРИВАТОВ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>ГЕРОЙ</h4>
+                        <div class="price-plan">
+                            <h2>320 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>ПОДЖИГАЙ</li>
+                            <li>БЕЙ МОЛНИЕЙ</li>
+                            <li>ПИШИ ОБЪЯВЛЕНИЯ</li>
+                            <li>36 СЛОТОВ НА АУКЦИОНЕ</li>
+                            <li>96 ПРИВАТОВ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>ДРАКОН</h4>
+                        <div class="price-plan">
+                            <h2>544 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>МЕНЯЙ ПОГОДУ И ВРЕМЯ</li>
+                            <li>ДОСТУП К ПРЕФИКСАМ</li>
+                            <li>ЛЕТАЙ</li>
+                            <li>999+ СЛОТОВ НА АУКЦИОНЕ</li>
+                            <li>999+ ПРИВАТОВ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>ИМПЕРАТОР</h4>
+                        <div class="price-plan">
+                            <h2>766 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>ВХОД НА ПОЛНЫЙ СЕРВЕР</li>
+                            <li>ДОП. КИТ-НАБОРЫ</li>
+                            <li>ВЫДАВАЙ ДОНАТ</li>
+                            <li>999+ СЛОТОВ НА АУКЦИОНЕ</li>
+                            <li>999+ ПРИВАТОВ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>КНЯЗЬ</h4>
+                        <div class="price-plan">
+                            <h2>999 ₽</h2>
+                        </div>
+                        <ul>
+                            <li>САМАЯ ТОПОВАЯ ПРИВИЛЕГИЯ СЕРВЕРА</li>
+                            <li>ЭКСКЛЮЗИВНЫЕ КИТ-НАБОРЫ</li>
+                            <li>999+ СЛОТОВ АУКЦИОНА</li>
+                            <li>999+ ПРИВАТОВ</li>
+                            <li>999+ ТОЧЕК ДОМА</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan-zero">
+                        <h4></h4>
+                        <div class="price-plan" opacity="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4 class="tic-text"></h4>
+                        <h4>ЮТУБЕРКА</h4>
+                        <ul>
+                            <li>ВЫДАЕТСЯ ЮТУБЕРАМ,</li>
+                            <li>КОТОРЫЕ ИГРАЮТ НА НАШЕМ СЕРВЕРЕ!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>ТАКЖЕ МОЖЕШЬ ПРИОБРЕСТИ КЕЙСЫ!</h2>
+                        <p>Множество способов оплаты! Максимально быстрая автоматическая выдача ключей!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>КЕЙС #1</h4>
+                        <div class="price-plan">
+                            <h2>100 ₽</h2>
+                        </div>
+                        <ul>
+                            <li id="select">ОТЛИЧНЫЙ И НЕДОРОГОЙ КЕЙС!</li>
+                            <li>ОКО ЭНДЕРА</li>
+                            <li>ТОТЕМ БЕССМЕРТИЯ</li>
+                            <li>АЛМАЗЫ</li>
+                            <li>ЗАЧАРОВАННЫЕ ЯБЛОКИ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>КЕЙС #2</h4>
+                        <div class="price-plan">
+                            <h2>395 ₽</h2>
+                        </div>
+                        <ul>
+                            <li id="select">ВЫИГРАЙ КРИСТАЛЛИКИ!</li>
+                            <li>KR 200</li>
+                            <li>KR 1.000</li>
+                            <li>KR 2.200</li>
+                            <li>KR 10.000</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>КЕЙС #3</h4>
+                        <div class="price-plan">
+                            <h2>150 ₽</h2>
+                        </div>
+                        <ul>
+                            <li id="select">ТОПОВЫЕ ПРЕДМЕТЫ ДЛЯ ВЫЖИВАНИЯ!</li>                            
+                            <li>ОБСИДИАН</li>
+                            <li>АЛМАЗЫ</li>
+                            <li>ЭЛИТРЫ</li>
+                        </ul>
+                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan-zero">
+                        <h4></h4>
+                        <div class="price-plan" opacity="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>КЕЙС #4</h4>
+                        <div class="price-plan">
+                            <h2>99 ₽</h2>
+                        </div>
+                        <ul>
+                            <li id="select">ПОПРОБУЙ ВЫБИТЬ ПРИВИЛЕГИЮ КРУЧЕ!</li>
+                            <li>ЗАЯЦ</li>
+                            <li>СТРЕЛОК</li>
+                            <li>ВОИН</li>
+                            <li>ДЕЛЬФИН</li>
+                            <li>МЕДВЕДЬ</li>
+                            <li>ГЕРОЙ</li>
+                            <li>ДРАКОН</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- price plan end -->
+
+    <!-- socials -->
+    <section class="socials-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>НАШИ СОЦСЕТИ</h2>
+                        <p>Там ты сможешь следить за жизнью сервера и появлением ПРОМОКОДОВ!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="socials-item">
+                        <img src="{% static "main/img/icons/1discord-icon.png"%}" alt="">
+                        <h5>DISCORD</h5>
+                        <p>Зови друзей и заходи на наш Discord-сервер! Тут ты сможешь
+                            обжаловать бан, подать жалобу на другого игрока, задать 
+                            вопросы админам и владельцу проекта, а также узнавать 
+                            первым о всех уникальных событиях на сервере! </p>
+                        <a href="https://discord.gg/CPWNfmKz6z" class="site-btn">ПЕРЕЙТИ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="socials-item">
+                        <img src="{% static "main/img/icons/1vk-icon.png"%}" alt="">
+                        <h5>ВКОНТАКТЕ</h5>
+                        <p>Уютный паблик нашего проекта! Залетай в обсуждения,
+                            там можно ознакомиться с правилами, подать жалобу,
+                            задать вопросы, рассказать о своих идеях по улучшению
+                            проекта, о своих впечатлениях и просто поболтать!
+                        </p>
+                        <a href="https://m.vk.com/club225293852?from=groups" class="site-btn">ПЕРЕЙТИ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="socials-item">
+                        <img src="{% static "main/img/icons/1yt-icon.png"%}" alt="">
+                        <h5>YOUTUBE</h5>
+                        <p>Лучшие видео на лучшем канале у лучшего проекта!
+                            Стримы, обзоры, геймплей и многое другое!
+                            Не забудь подписаться и нажать на колокольчик,
+                            чтобы не пропускать новые видео =)
+                        </p>
+                        <a href="https://youtube.com/@TomorYT?si=CZndvwOlwbTlm711" class="site-btn">ПЕРЕЙТИ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- socials end -->
+
+    <!-- footer copyright -->
+    <footer class="footer-section">
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+                            &copy; KRASWORLD, <script>document.write(new Date().getFullYear());</script> <br>
+                            <a href="/contacts">КОНТАКТНАЯ ИНФОРМАЦИЯ И РЕКВИЗИТЫ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer copyright end -->
+
+    <!-- js connecting -->
+    <script type="text/javascript" src="{% static "main/js/jquery-3.3.1.min.js"%}"></script>
+    <script type="text/javascript" src="{% static "main/js/bootstrap.min.js"%}"></script>
+    <script type="text/javascript" src="{% static "main/js/jquery.magnific-popup.min.js"%}"></script>
+    <script type="text/javascript" src="{% static "main/js/mixitup.min.js"%}"></script>
+    <script type="text/javascript" src="{% static "main/js/jquery.nice-select.min.js"%}"></script>
+    <script type="text/javascript" src="{% static "main/js/main.js"%}"></script>
+    <script type="text/javascript" src="{% static "main/js/jquery.slicknav.js"%}"></script>
+</body>
+
+</html>
