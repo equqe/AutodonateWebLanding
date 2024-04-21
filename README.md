@@ -7,7 +7,6 @@ main page + page with contact info
 ---
 ## Stack
 - Django
-- Django Rest Framework
 - Python
 
 ---
