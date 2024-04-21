@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'kw_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'u2565677_default',
-        'USER': 'u2565677_default',
-        'PASSWORD': 'qs8Aum4EGVoIA62w',
-        'HOST': 'localhost',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
     }
 }
 
