@@ -1,2 +1,3 @@
-# donateWebLanding
-landing for Krasworld 
+# AutodonateLanding
+yookassa api integration + RCON, adaptive frontend, good design.
+Django, Python 3.12.2
