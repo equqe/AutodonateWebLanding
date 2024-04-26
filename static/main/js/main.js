@@ -38,8 +38,6 @@ function copy() {
         const textToCopy = "mc.krasworld.ru";
         navigator.clipboard.writeText(textToCopy).then(function() {
             addNotification();
-        }, function(err) {
-            console.error('Failed to copy: ', err);
         });
 }
 
