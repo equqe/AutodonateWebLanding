@@ -1,9 +1,9 @@
-from django.contrib import admin
 from django.urls import path
-
-from main.views import index, contacts
+from main import views
 
 urlpatterns = [
-    path('', index),
-    path('contacts/', contacts)
+    path('', views.index),
+    path('contacts/', views.contacts),
+    path('payment/', views.create_payment, name='create_payment'),
+    path('webhook/', views.handle_webhook, name='handle_webhook')
 ]
