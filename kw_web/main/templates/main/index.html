@@ -20,7 +20,18 @@
 <body>
     <div class="progress-bar" id="progressBar"></div>
     
+    <!-- widgets -->
     <div id="notification">Текст скопирован в буфер обмена!</div>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <h2>Ваш ник и email</h2>
+            <input type="text" id="username" placeholder="username">
+            <input type="text" id="email" placeholder="e-mail">
+            <button class="confirm-btn">Далее</button>
+        </div>
+    </div>
     
     <!-- preloader -->
     <div id="preloder">
@@ -55,7 +66,7 @@
                                 <h2>Твой любимый</h2>
                                 <h1>ГРИФЕРСКИЙ СЕРВЕР</h1>
                                 <div class="divider"></div>
-                                <button class="copy-btn">IP: mc.krasworld.ru</button>
+                                <button class="copy-btn notif">IP: mc.krasworld.ru</button>
                             </div>
                         </div>
                     </div>
@@ -177,7 +188,7 @@
                                       max="5000" 
                                       step="5" 
                                       oninput="range.value=value"
-                                      required /> <a id="rub"> <span class="validity"></span> KR </a> <input type="submit" id="crystal" class="copy-btn" value="КУПИТЬ" />
+                                      required /> <a id="rub"> <span class="validity"></span> KR </a> <input type="submit" id="crystal" class="copy-btn open-popup" data-donate="eco" value="КУПИТЬ" />
                                 </div>
                             </form>
                         </div>
@@ -213,7 +224,7 @@
                             <li>5 СЛОТОВ НА АУКЦИОНЕ</li>
                             <li>2 ПРИВАТА</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="55" data-donate="rabbit">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -229,7 +240,7 @@
                             <li>7 СЛОТОВ НА АУКЦИОНЕ</li>
                             <li>4 ПРИВАТА</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="95" data-donate="shooter">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -245,7 +256,7 @@
                             <li>9 СЛОТОВ НА АУКЦИОНЕ</li>
                             <li>8 ПРИВАТОВ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="122" data-donate="warrior">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -261,7 +272,7 @@
                             <li>14 СЛОТОВ НА АУКЦИОНЕ</li>
                             <li>16 ПРИВАТОВ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="165" data-donate="dolphin">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -277,7 +288,7 @@
                             <li>22 СЛОТА НА АУКЦИОНЕ</li>
                             <li>48 ПРИВАТОВ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="232" data-donate="bear">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -293,7 +304,7 @@
                             <li>36 СЛОТОВ НА АУКЦИОНЕ</li>
                             <li>96 ПРИВАТОВ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="320" data-donate="hero">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -309,7 +320,7 @@
                             <li>999+ СЛОТОВ НА АУКЦИОНЕ</li>
                             <li>999+ ПРИВАТОВ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="544" data-donate="dragon">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -325,7 +336,7 @@
                             <li>999+ СЛОТОВ НА АУКЦИОНЕ</li>
                             <li>999+ ПРИВАТОВ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="766" data-donate="emperor">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -341,7 +352,7 @@
                             <li>999+ ПРИВАТОВ</li>
                             <li>999+ ТОЧЕК ДОМА</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="999" data-donate="knyaz">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -384,7 +395,7 @@
                             <li>АЛМАЗЫ</li>
                             <li>ЗАЧАРОВАННЫЕ ЯБЛОКИ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="100" data-donate="522">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -400,7 +411,7 @@
                             <li>KR 2.200</li>
                             <li>KR 10.000</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="395" data-donate="876">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -415,7 +426,7 @@
                             <li>АЛМАЗЫ</li>
                             <li>ЭЛИТРЫ</li>
                         </ul>
-                        <a href="" class="primary-btn price-btn">КУПИТЬ</a>
+                        <a class="primary-btn price-btn open-popup" data-amount="150" data-donate="773">КУПИТЬ</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -441,6 +452,7 @@
                             <li>ГЕРОЙ</li>
                             <li>ДРАКОН</li>
                         </ul>
+                        <a class="primary-btn price-btn open-popup" data-amount="99" data-donate="450">КУПИТЬ</a>
                     </div>
                 </div>
             </div>
@@ -525,6 +537,8 @@
     <script type="text/javascript" src="{% static "main/js/jquery.nice-select.min.js"%}"></script>
     <script type="text/javascript" src="{% static "main/js/main.js"%}"></script>
     <script type="text/javascript" src="{% static "main/js/jquery.slicknav.js"%}"></script>
+    <script type="text/javascript" src="https://yookassa.ru/checkout-widget/v1/checkout-widget.js"></script>
+
 </body>
 
 </html>
