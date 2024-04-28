@@ -126,10 +126,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT='static/'
 
-# Yookassa
-YOOKASSA_SECRET_KEY = env('YOOKASSA_SECRET_KEY')
-YOOKASSA_SHOP_ID = env('YOOKASSA_SHOP_ID')
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
