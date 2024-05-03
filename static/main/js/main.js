@@ -3,27 +3,28 @@ $(function () {
 
     // preloader
     $(window).on('load', function () {
-        $(".loader").fadeOut();
-        $("#preloder").delay(200).fadeOut("slow");
+        $(".loader, #preloder").fadeOut("slow");
     });
 
     // bg set
-    $('.set-bg').each(function () {
-        $(this).css('background-image', 'url(' + $(this).data('setbg') + ')');
+    $('.set-bg').css('background-image', function () {
+        return 'url(' + $(this).data('setbg') + ')';
     });
 
     // menu hover
-    $(".header-section .nav-menu .mainmenu ul li")
-        .on('mouseenter', function() {
+    const menuItems = $(".header-section .nav-menu .mainmenu ul li");
+    menuItems.hover(
+        function() {
             $(this).addClass('active');
-        })
-        .on('mouseleave', function() {
+        },
+        function() {
             $(this).removeClass('active');
-        });
+        }
+    );
 
     // copy text
+    const notification = $('#notification');
     function addNotification() {
-        var notification = $('#notification');
         notification.addClass('show');
         setTimeout(function() {
             notification.removeClass('show');
@@ -42,9 +43,9 @@ $(function () {
 
     // progress bar
     function progressBar() {
-        let scroll = window.scrollY || document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = scroll / height * 100;
+        const scroll = window.scrollY || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = scroll / height * 100;
 
         $('#progressBar').css('width', scrolled + '%');
     }
@@ -87,10 +88,7 @@ $(function () {
     });
 
     function handleInputChange(e) {
-        let target = e.target;
-        if (e.target.type !== 'range') {
-            target = $('#range')[0];
-        }
+        const target = e.target.type !== 'range' ? $('#range')[0] : e.target;
         const min = target.min;
         const max = target.max;
         const val = target.value;
