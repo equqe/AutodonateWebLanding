@@ -1,6 +1,5 @@
 # AutodonateLanding
 reg.ru hosting, running on Phusion Passenger. 
-https://krasworld.ru
 
 main page + page with contact info
 
